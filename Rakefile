@@ -11,3 +11,8 @@ Rake::TestTask.new(:test) do |t|
 end
 
 task :default => :test
+
+desc "Open an pry session with Gasoline loaded"
+task :console do
+  sh "pry -I lib -r gasoline.rb"
+end
