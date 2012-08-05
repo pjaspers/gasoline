@@ -14,7 +14,7 @@ module Gasoline
     def initialize
       @drops = []
       bootstrap
-      add_drops(YAML.load_file(yaml_file)[:drops])
+      add_drops(YAML.load_file(yaml_file)[:drops]) rescue nil
     end
 
     # Adds a drop of gasoline to the jerrycan

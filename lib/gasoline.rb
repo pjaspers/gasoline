@@ -7,6 +7,7 @@ require "gasoline/jerrycan"
 require "gasoline/drop"
 require "gasoline/patchor"
 require "gasoline/texts"
+require "gasoline/cli"
 
 module Gasoline
 

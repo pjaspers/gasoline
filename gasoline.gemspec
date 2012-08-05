@@ -14,4 +14,6 @@ Gem::Specification.new do |gem|
   gem.name          = "gasoline"
   gem.require_paths = ["lib"]
   gem.version       = Gasoline::VERSION
+
+  gem.add_runtime_dependency("thor", ["~> 0.15.4"])
 end
