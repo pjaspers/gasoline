@@ -47,8 +47,11 @@ module Gasoline
       return if File.exist?(yaml_file)
 
       FileUtils.mkdir_p(File.split(yaml_file).first)
-      FileUtils.touch(yaml_file)
-      save
+      FileUtils.cp(example_config, yaml_file)
+    end
+
+    def example_config
+      File.join(File.dirname(__FILE__), "../../example_drops.yml")
     end
 
     # All the `Drop`s in this Jerrycan.

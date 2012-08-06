@@ -1,0 +1,14 @@
+---
+:drops:
+- :name: Avatars
+  :url: https://gist.github.com/065d1dc1906c153e4edc
+  :description: Adds avatars to friendly faces
+- :name: Cloud App
+  :url: https://gist.github.com/431f7c803ddb0d751a40
+  :description: Adds support for Cloud.ly links
+- :name: Flickr
+  :url: https://gist.github.com/6dcf1366df5203157fda
+  :description: Adds support for Flickr links
+- :name: Instagram
+  :url: https://gist.github.com/3258692
+  :description: Instagram support
