@@ -6,28 +6,24 @@ module Gasoline
     include Thor::Actions
 
     map "-i" => :ignite
+    map "-a" => :add
     map "-l" => :list
-    map "-m" => :more
     map "-c" => :config
 
-    desc "ignite", "-i, Patches the file with the contents of the config"
+    desc "ignite", "Downloads and patches the file"
     def ignite
       Gasoline::Patchor.new.patch_it_chewie!
-      say "I have patched the patch file"
+      say_status :ok,  "I have patched the patch file"
     end
 
     desc "list", "-l, Current installed drops of gasoline"
     def list
-      installed_drops = Gasoline::Patchor.new.drops.collect{|d| "\t- #{d.name} - #{d.description}"}.join("\n")
-      say "Currently using these drops of gasoline:\n#{installed_drops}"
+      first_line = ["Currently using these drops of gasoline:"]
+      installed_drops = Gasoline::Patchor.new.drops.collect(&:to_s)
+      say (first_line + installed_drops).join("\n\t- ")
     end
 
-    desc "more", "-m, Show remote configs"
-    def more
-      say "TODO"
-    end
-
-    desc "add NAME URL description", "Adds a drop to the config"
+    desc "add NAME URL description", "-a, Adds a drop to the config"
     def add(name, url, description)
       can = Gasoline::Jerrycan.new
       can.add_drops([{:name => name, :url => url, :description => description}])

@@ -15,6 +15,10 @@ module Gasoline
       @description = description
     end
 
+    def to_s
+      "%s: %s" % [@name, @description]
+    end
+
     def to_hash
       {:name => @name, :url => @url, :description => @description}
     end
