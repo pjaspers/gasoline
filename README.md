@@ -19,3 +19,4 @@ The only downside to that approach was managing the file. So that's where Gasoli
 ## Contributing
 
 Fork it! Improve it! Test it! Rewrite it! (technology)
+[![Build Status](https://secure.travis-ci.org/pjaspers/gasoline.png?branch=master)](http://travis-ci.org/pjaspers/gasoline)
