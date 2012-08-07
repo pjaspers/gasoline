@@ -4,6 +4,9 @@ source 'https://rubygems.org'
 gemspec
 
 group :test do
+  # Adding rake for Travis.
+  gem 'rake'
+
   # minitest provides a complete suite of testing facilities...
   # [minitest](https://github.com/seattlerb/minitest)
   gem 'minitest', '~> 3.3.0'
