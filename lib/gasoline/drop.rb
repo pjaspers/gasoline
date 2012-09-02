@@ -71,7 +71,7 @@ end
 #{header}
 #{@js}
 
-
+// console.log("Loaded #{@name}");
 PATCH
     end
 
