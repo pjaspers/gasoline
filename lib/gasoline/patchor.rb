@@ -78,6 +78,7 @@ module Gasoline
     # First fills up the @lines instance, then saves the file
     def patch_it_chewie!
       patch_it_chewie
+      Gasoline::Applescript.refresh_propane_if_running
       save
     end
 

@@ -8,6 +8,7 @@ require "gasoline/drop"
 require "gasoline/patchor"
 require "gasoline/texts"
 require "gasoline/cli"
+require "gasoline/applescript"
 
 module Gasoline
 
