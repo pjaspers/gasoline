@@ -3,6 +3,12 @@ source 'https://rubygems.org'
 # Specify your gem's dependencies in gasoline.gemspec
 gemspec
 
+group :development do
+  # An IRB alternative and runtime developer console
+  # [pry](http://pry.github.com)
+  gem 'pry', '~> 0.9.10'
+end
+
 group :test do
   # Adding rake for Travis.
   gem 'rake'
