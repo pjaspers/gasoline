@@ -12,3 +12,6 @@
 - :name: Instagram
   :url: https://gist.github.com/3258692
   :description: Instagram support
+- :name: SpeakerDeck
+  :url: https://gist.github.com/4377786
+  :description: Adds support for SpeakerDeck links
