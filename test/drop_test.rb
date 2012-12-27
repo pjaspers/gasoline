@@ -55,6 +55,11 @@ describe Gasoline::Drop do
       assert_match "zyx", @drop.description
     end
 
+    it "should return nil if there was any error fetching it" do
+      @drop.stubs(:download_content).raises(StandardError, 'some error probably 404')
+      assert_nil @drop.patch
+    end
+
     it "should try to download when asked for patch" do
       @drop.expects(:download_content).returns("ZE JS CONTENT")
       assert_match "ZE JS", @drop.patch

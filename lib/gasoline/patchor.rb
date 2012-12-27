@@ -71,7 +71,7 @@ module Gasoline
     def patch_it_chewie
       to_keep = @lines[0...cut_line_index]
       snippet = [Gasoline::Texts::cut_here_snippet]
-      to_add = drops.collect {|d| d.patch}
+      to_add = drops.collect(&:patch).compact
       @lines = (to_keep + snippet + to_add)
     end
 

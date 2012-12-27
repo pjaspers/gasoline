@@ -24,12 +24,11 @@ describe Gasoline::Patchor do
   describe "patching the patch" do
     before do
       @patchor = Gasoline::Patchor.new
-      drop = mock()
-      drop.expects(:patch).returns("ZE PATCH")
-      @patchor.expects(:drops).returns([drop])
     end
 
     it "should download the patches and add them to lines" do
+      drop = OpenStruct.new(:patch => "ZE PATCH")
+      @patchor.expects(:drops).returns([drop])
       @patchor.patch_it_chewie
       assert @patchor.lines.include?("ZE PATCH")
     end

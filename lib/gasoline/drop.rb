@@ -73,6 +73,9 @@ end
 
 // console.log("Loaded #{@name}");
 PATCH
+    rescue => error
+      puts "  -> #{error.message}"
+      nil
     end
 
   end
