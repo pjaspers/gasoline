@@ -33,7 +33,7 @@ module Gasoline
 
     # Returns the raw url for the specified gist
     def raw_gist_url
-      @url.gsub("gist.github.com/", "raw.github.com/gist/")
+      [@url, "raw"].join("/")
     end
 
     # Returns the javascript from the gist URL.

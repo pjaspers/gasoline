@@ -39,12 +39,12 @@ describe Gasoline::Drop do
 
   describe "getting the content" do
     before do
-      @url = "https://gist.github.com/3258692"
+      @url = "https://gist.github.com/pjaspers/3258692"
       @drop = Gasoline::Drop.new("xyz", @url, "zyx")
     end
 
     it "should get the raw gist url" do
-      assert_equal "https://raw.github.com/gist/3258692", @drop.raw_gist_url
+      assert_equal "https://gist.github.com/pjaspers/3258692/raw", @drop.raw_gist_url
     end
 
     it "should set header with name" do
