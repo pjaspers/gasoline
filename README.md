@@ -32,6 +32,8 @@ After adding a gist (or multiple) make sure to ignite them: `gasoline ignite`
 
 - [Cloud App](https://gist.github.com/431f7c803ddb0d751a40) Adds support for Cloud.ly links
 
+- [CloudUp](https://gist.github.com/pjaspers/6761954) Adds support for CloudUp links
+
 - [Flickr](https://gist.github.com/6dcf1366df5203157fda) Adds support for Flickr links
 
 - [Build Colorizer](https://gist.github.com/4cf99c91eefc6d325d2c) Colors build output messages
